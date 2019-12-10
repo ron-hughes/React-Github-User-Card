@@ -9,17 +9,20 @@ width: 500px;
 height: 500px;
 margin: 0 auto;
 color: white;
+li {
+    text-align: left;
+}
 `
 
     return(
         <>
            <UserDiv>
-            
-
-            <li>Name: {props.data.name}</li> 
+           <img src={props.data.avatar_url} height="350px" width="350px" />
+           <li>Username: {props.data.login}</li>
+            <li>Full Name: {props.data.name}</li> 
            <li>Followers: {props.data.followers}</li>
 
-           <img src={props.data.avatar_url} />
+         
         
            </UserDiv>
         </>

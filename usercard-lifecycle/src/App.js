@@ -20,7 +20,7 @@ class App extends Component {
   
   render() {
     return <div className="App">
-    
+        {console.log(this.state)}
         <UserCard data={this.state}/>
     </div>;
   }
