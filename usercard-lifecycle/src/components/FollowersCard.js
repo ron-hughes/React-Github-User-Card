@@ -23,7 +23,8 @@ const Followers = props => {
     const divStyle = {
         border: '5px solid #ff6550',
         margin: '2px',
-        margin: '2px auto'
+        margin: '2px auto',
+        borderRadius: '10px'
     }
 
 return(
