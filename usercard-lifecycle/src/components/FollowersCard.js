@@ -13,18 +13,29 @@ const Followers = props => {
         height: 300px;
     }
     `
-
+    const Div = styled.div`
+        border: 20px solid #ff6550;
+        margin: 0 auto;
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    `
+    const divStyle = {
+        border: '20px solid #ff6550',
+        margin: '2px',
+        margin: '2px auto'
+    }
 
 return(
 <>
 
 <FollowersDiv>
     
-    <div>
+    <Div>
     {props.followerdata.map((name) => { 
-    return <img src={name.avatar_url}></img>
+    return <div style={divStyle}><img src={name.avatar_url}></img></div>
     })}
-    </div>
+    </Div>
    
   
 </FollowersDiv>
