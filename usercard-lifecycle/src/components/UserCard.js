@@ -11,7 +11,7 @@ margin: 0 auto;
 color: white;
 li {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 `
 
