@@ -4,11 +4,14 @@ import styled from 'styled-components';
 const Followers = props => {
 
     const FollowersDiv = styled.div`
-    background-color: royalblue;
-    width: 450px;
-    height: 400px;
+    background-color: white;
     color: white;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    img {
+        width: 300px;
+        height: 300px;
+    }
     `
 
 
@@ -16,12 +19,13 @@ return(
 <>
 
 <FollowersDiv>
+    
     <div>
-
     {props.followerdata.map((name) => { 
     return <img src={name.avatar_url}></img>
     })}
     </div>
+   
   
 </FollowersDiv>
 </>

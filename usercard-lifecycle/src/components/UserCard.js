@@ -6,7 +6,7 @@ const UserCard = (props) => {
 const UserDiv = styled.div`
 background-color: royalblue;
 width: 350px;
-height: 500px;
+height: 600px;
 margin: 0 auto;
 color: white;
 li {
