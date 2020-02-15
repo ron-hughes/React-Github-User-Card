@@ -18,23 +18,24 @@ class App extends Component {
     };
   }
 
-  fetchFollowers = () => {
-    axios.get('https://api.github.com/users/ron-hughes/followers')
-    .then( followers => { this.setState({ followers : followers.data}) })
+  fetchFollowers = (userName) => {
+    axios.get(`https://api.github.com/users/${userName}/followers`)
+    .then( followers => { this.setState({ followers : [...followers.data]}) })
     .catch( error => {})
   }
 
-  fetchNewUser = (userName) => {
-    axios.get(`https://api.github.com/users/${userName}`)
+  fetchNewUser = async (userName) => {
+   await axios.get(`https://api.github.com/users/${userName}`)
     .then ( newUser => { this.setState({ user: newUser.data})})
     .catch ( error => { console.log("error", error)})
+    this.fetchFollowers(userName);
   }
 
   async componentDidMount() {
     await axios.get("https://api.github.com/users/ron-hughes")
     .then( user => { this.setState( { user :user.data})})
     .catch( error => { console.log("error", error)})
-    this.fetchFollowers();
+    this.fetchFollowers("ron-hughes");
   }
   
   render() {

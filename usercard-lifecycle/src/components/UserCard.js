@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const UserDiv = styled.div`
-background-color: royalblue;
+background-color: #a83c32;
 width: 350px;
 height: 600px;
 margin: 0 auto;

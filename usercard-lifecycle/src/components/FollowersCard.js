@@ -9,8 +9,8 @@ const Followers = props => {
     display: flex;
     flex-direction: row;
     img {
-        width: 300px;
-        height: 300px;
+        width: 150px;
+        height: 150px;
     }
     `
     const Div = styled.div`
@@ -24,7 +24,8 @@ const Followers = props => {
         border: '5px solid #ff6550',
         margin: '2px',
         margin: '2px auto',
-        borderRadius: '10px'
+        borderRadius: '10px',
+        height: '150px'
     }
 
 return(
@@ -33,8 +34,8 @@ return(
 <FollowersDiv>
     
     <Div>
-    {props.followerdata.map((name) => { 
-    return <div style={divStyle}><a href={name.html_url}><img src={name.avatar_url}></img></a></div>
+    {props.followerdata.map((name, id) => { 
+    return <div style={divStyle} key={id}><a href={name.html_url}><img src={name.avatar_url}></img></a></div>
     })}
     </Div>
    
